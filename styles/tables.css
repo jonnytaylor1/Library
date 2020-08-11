@@ -1,0 +1,136 @@
+/* *FULLY COPIED* */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+  
+/* *FULLY COPIED* */
+
+  table {
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 3rem;
+  }
+
+/* * COPIED EXCEPT FOR BORDER LEFT and RIGHT* */
+
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+    border-left: none;
+    border-right: none;
+  }
+  
+/* *FULLY COPIED* */
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+/* *FULLY COPIED* */
+
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+/* *NOT COPIED* */
+
+  .table td{
+      border-top: none;
+  }
+
+/* *NOT COPIED* */
+
+  .table{
+      margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: 900px) {
+
+  /* *FULLY COPIED* */
+
+    table {
+      border: 0;
+    }
+  
+  /* *FULLY COPIED* */
+  
+    table thead {
+      border: none;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  
+  /* *COPIED EXCEPT PADDING* */
+
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+      padding: 0;
+    }
+    
+/* *FULLY COPIED* */
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: left;
+    }
+
+  /* *FULLY COPIED* */
+    
+    table td::before {
+      content: attr(data-label) ": \00a0";
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+  /* *FULLY COPIED* */
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+    
+  }
+
+  /* *NOT COPIED* */
+
+  table input{
+      height: 3rem;
+  }
+
+/* *NOT COPIED* */
+
+  table tr:last-of-type{
+      border-bottom: none;
+  }
+
+/* *NOT COPIED* */
+
+  td input {
+    width: 100%;
+}
+
+/* The collapsible table functionality from the tables.css page was taken and modified from the website below. */
+
+/*Matt Smith. 2020. Simple Responsive Table in CSS Available at: https://codepen.io/AllThingsSmitty/pen/MyqmdM [Accessed: 03 January 2020]*/
+  /*  */
+
+
+  

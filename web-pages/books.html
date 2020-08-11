@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="home">
+            <a href="index.html"><h2>PontyBridge Library</h2></a>
+            </div>
+            <input type="checkbox" id = "burger" class = "nav-burger"> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <label for="burger">&#9776;</label> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <nav>
+                <a href="users.html">Users</a> <!--choose not to use ul and li because I wanted the clickable area for the hyperlinks to cover the full length and height of the dropdown menu rectangles-->
+                <a href="books.html">Books</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+        </div>
+    </header>
+    <div class = "mainOuterContainer">
+    <main class="center">
+        <div>
+        </div>
+            <div class = "switchFormBtns">
+                <button id = "displayAddBtn" class = "selectedFormBtn">Add Book</button>
+                <button id = "displaySearchBtn" class = "unselectedFormBtn">Search Book</button>
+            </div>
+            <div class = "formContainer">
+            <form id = "addBookForm" class=" displayOne verticalForm form center maxWidth displayGrid">
+                <h1>Add New Book</h1>
+                <input id = "bookName" class = "addItemInput inputField" type="text" placeholder="Book Name">
+                <input id = "isbnNumber" class = "addItemInput inputField" type="text" placeholder="ISBN Number">
+                <input id = "numberRequested" class = "addItemInput inputField" type="text" placeholder="Number of Authors to Add">
+                <button type = "reset" id = "saveBookDetails" class = "blockBtn">Add Book</button>
+            </form>
+            <form id = "authorModify" class = "displayTwo horizontalForm form displayNone">
+                <input id = "bookTitle" class ="inputField inlineInputField" type="text" name="name" placeholder="Search Book By Title">
+                <button type = "reset" id = "searchBookByTitle" class="inlineSubmitBtn inlineBtn">Search</button>
+                <input id = "bookAuthor" class ="inputField inlineInputField" type="text" name="name" placeholder="Search Book By Author">
+                <button type = "reset" id = "searchBookByAuthor" class="inlineSubmitBtn inlineBtn">Search</button>
+                <input id = "bookId" class ="inputField inlineInputField" type="text" name="name" placeholder="Book ID">
+                <button type = "reset" id = "deleteBookBtn" class="inlineSubmitBtn inlineBtn">Remove Book</button>
+            </form>
+            <table id = "booksTable" class="table">
+                <thead id = "headingsRow">
+                </thead>
+                <tbody id = "bodyRows">
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+</div>
+    <footer>
+        <div class="containerFooter">
+          <a href="users.html">Users</a>
+          <a href="books.html">Books</a>
+          <a href="loans.html">Loans</a>
+          <a href="index.html">University of PontyBridge</a>
+        </div>
+      </footer>
+<script src="../js/addBook.js"></script>
+<script src = "../js/searchBook.js"></script>
+<script src = "../js/allPages.js" ></script>
+<script src = "../js/removeBook.js"></script>
+<script src="../js/changeUserForm.js"></script>
+</body>
+</html>

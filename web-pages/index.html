@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="home">
+            <a href="index.html"><h2>PontyBridge Library</h2></a>
+            </div>
+            <input type="checkbox" id = "burger" class = "nav-burger"> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <label for="burger">&#9776;</label> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <nav>
+                <a href="users.html">Users</a> <!--choose not to use ul and li because I wanted the clickable area for the hyperlinks to cover the full length and height of the dropdown menu rectangles-->
+                <a href="books.html">Books</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+        </div>
+    </header>
+    <div class = "mainOuterContainer">
+        <main class = "center">
+        <div></div>
+        <h1>Welcome to the University Library System</h1>
+        <p> On each page there will be two separate forms, for example on the users page there is a form for adding a user and a form for searching or modifying a user.
+            To access the form that you want to use, simply click one of the two buttons that are located above the form.
+         </p>
+    </main>
+    </div>
+    <footer>
+        <div class="containerFooter">
+          <a href="users.html">Users</a>
+          <a href="books.html">Books</a>
+          <a href="loans.html">Loans</a>
+          <a href="index.html">University of PontyBridge</a>
+        </div>
+    </footer>
+<script src="../js/allPages.js"></script>
+</body>
+</html>

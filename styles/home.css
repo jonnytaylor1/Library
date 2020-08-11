@@ -1,0 +1,7 @@
+p{
+    padding: 0.5rem;
+    border: lightgray solid 0.1rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    border-radius: 0.5rem; 
+}

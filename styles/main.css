@@ -1,0 +1,422 @@
+/* CSS Reset styling */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+	border: 0;
+    box-sizing: border-box;}
+/* Eric A. and Kathryn S. Meyer. 2019. CSS Tools: Reset CSS. Version 2.0.
+[html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}].
+Available at: https://meyerweb.com/eric/tools/css/reset/ [Accessed: 26 October 2019].*/
+
+
+
+
+/* Text Styling */
+
+
+h1{
+  font-size: 2.3rem;
+  font-family: 'Quattrocento', serif;
+  color: #791B99;}
+
+h2, .switchFormBtns button{
+  font-size: 2rem;
+  font-family: 'Quattrocento', serif;
+  }
+  
+p, a {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #791B99;
+  font-size: 1.4rem;}
+
+
+a {
+  text-decoration: none;}
+
+
+/* General Styling */
+
+
+.center{
+    margin: 0 auto;
+}
+.displayGrid{
+    display: grid;
+}
+
+.displayNone{
+    display: none;
+}
+
+/* Button styles */
+
+
+button{
+    border:none;
+    background-color: rgb(78, 78, 78);
+    color:white;
+
+}
+
+button:focus, select:focus { 
+    outline: none; 
+}
+
+.unselectedFormBtn{
+    background-color: white;
+    color:purple;
+    border:  rgb(223, 223, 223) solid 1px;
+}
+
+.selectedFormBtn{
+    background-color: purple;
+    color:white;
+}
+
+.saveBtn, .deleteBtn{
+    height: 3rem;
+    width: 5rem;
+}
+
+.switchFormBtns{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 5rem;
+    margin-top: 2rem;
+}
+
+/* Submit button for adding a user/book/loan */
+
+.blockBtn {
+    margin: 0 auto;
+    height:4rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+/* Forms */
+
+.formContainer{
+    border: rgb(223, 223, 223) solid 1px;
+    background-color: rgb(248, 248, 248);
+    border-top: none;
+    padding-top: 5rem;
+}
+
+.form {
+    max-width: 18rem;
+    margin: 0 auto;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.verticalForm{
+    grid-template-rows: auto auto auto;
+}
+
+.horizontalForm{
+    grid-template-columns: auto 6rem;
+    grid-template-areas: 
+    "heading heading"
+    "inputLeft btnRight";
+    margin-bottom: 2rem;
+}
+
+.heading{
+    grid-area: heading;
+}
+
+
+.inputLeft{
+    grid-area: inputLeft;
+}
+
+.btnRight{
+    grid-area: btnRight;
+}
+
+/* Input fields  */
+
+input{
+    border: 1px #a6a6a6 solid;
+    padding-left: 0.5rem;
+}
+
+.inputField, .inlineBtn {
+    height: 3rem;
+    margin: 0 auto;
+    width:100%;
+}
+
+/* Input field when the submit button is directly to the right */
+
+.inlineInputField{
+    border-right: none;
+    margin-bottom: 2rem;
+}
+
+/* Input field when directly above each other (this is so there is no overlapping) */
+
+input.addItemInput{
+    border-top: none;
+}
+
+/* Adds a top border to the first input of a vertical form */
+
+.verticalForm input:first-of-type {
+    border-top: 1px #a6a6a6 solid;
+}
+
+/* Dropdown menu on add user form */
+
+#memberType {
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+/*Navigation Menu*/
+
+header {
+  border-bottom: 0.1rem solid #9A55B2;
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+  width: 100%;
+  padding: 0.5rem 1.5rem 0 1.5rem;}
+
+.headerContainer {
+  height: 7rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 77rem;
+  margin: 0 auto;}
+
+.home {
+  margin-right: 5rem;}
+
+nav {
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem; /*Could not use auto auto auto auto because a:hover {font-weight:bold} caused the navigation menu to shift left*/
+  grid-column-gap: 5rem;
+}
+
+a:hover{
+  font-weight: bold;
+  color: #791B99;
+}
+
+/*the idea of 'label {display:none}' in desktop view was taken from the youtube video below*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+label {
+  font-size: 3.5rem;
+  position: absolute;
+  right: 1rem;
+  top:0.7rem;
+  display: none;
+  color: #791B99;}
+
+/*The idea of being able to target navigation menu by using checkbox id checked from the youtube video below*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+#burger:checked ~ nav {
+display: block;}
+
+/*The idea of having input {display:none} in the desktop view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+#burger {
+  display: none;}
+
+
+/*The idea of using relative positioning for the parent container so that the absolute positioned child element is positioned in relation to the parent*/
+/*Chris Coyier. 2010. Absolute Positioning Inside Relative Positioning Available at: https://css-tricks.com/absolute-positioning-inside-relative-positioning/ [Accessed: 26 October 2019]*/
+
+
+
+/* Main styles */
+
+/* This was needed to enable the header to stay in place */
+
+.mainOuterContainer{
+    min-height: calc(100vh - 18rem);
+}
+
+main{
+    padding-top: 8rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+main h1 {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+
+
+/* Footer */
+
+footer{
+background-color: #E6E1F9;
+padding: 0 1.5rem;
+margin-top: 5rem;
+}
+
+.containerFooter{
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 4rem);
+  grid-auto-flow: column;
+  padding: 0 1rem 1rem 1rem;
+  align-items: flex-end;}
+
+.containerFooter a:nth-of-type(4){
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: right;}
+
+.containerFooter a:hover {
+  font-weight: normal;
+  text-decoration: underline;}
+
+
+
+/* Mobile Layout */
+
+@media(max-width: 750px) {
+
+/* Mobile text styling */
+
+  h1{
+    font-size: 2rem;}
+
+  h2, .switchFormBtns button{
+    font-size: 1.8rem;}
+
+  /* Mobile Navigation Menu */
+
+  .headerContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem;
+    height: auto;}
+
+  .home {
+    width: 13rem;
+    margin-right: 20rem;}
+
+/*The idea of displaying the mobile navigation menu as none*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+
+  nav {
+    display: none;
+    margin-right: 0;
+    padding-top: 1rem;}
+
+
+/*The idea of displaying the unordered list as block in mobile view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+
+  a {
+    display: block;}
+
+  nav a {
+      line-height: calc((100vh - 6.75rem)/4);
+      text-align: center;
+      margin-right: -2rem;
+      margin-left: -2rem;
+      border-top: solid #9A55B2 0.1rem;}
+
+  nav a:hover{
+      background-color: #9A55B2;
+      color:white;}
+
+
+/*The idea of displaying label as block in mobile view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: https://www.youtube.com/watch?v=xMTs8tAapnQ [Accessed: 26 October 2019]*/
+
+  label{
+    display: block;}
+
+  label:hover{
+    cursor: pointer;}
+
+
+/* Mobile Main */
+
+/* Makes the form container touch the screen edges for smaller screens */
+
+    main{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    /* ------ Mobile Footer */
+
+  .containerFooter {
+    grid-template-columns: auto 10rem;}
+
+  .containerFooter a:last-of-type{
+    min-width: 10rem;}
+}
+
+
+
+
+

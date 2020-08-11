@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loans</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="home">
+            <a href="index.html"><h2>PontyBridge Library</h2></a>
+            </div>
+            <input type="checkbox" id = "burger" class = "nav-burger"> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <label for="burger">&#9776;</label> <!-- Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019] -->
+            <nav>
+                <a href="users.html">Users</a> <!--choose not to use ul and li because I wanted the clickable area for the hyperlinks to cover the full length and height of the dropdown menu rectangles-->
+                <a href="books.html">Books</a>
+                <a href="loans.html">Loans</a>
+            </nav>
+        </div>
+    </header>
+    <div class = "mainOuterContainer">
+    <main class="center">
+        <div>
+        </div>
+            <div class = "switchFormBtns">
+                <button id = "displayAddBtn" class = "selectedFormBtn">Add Loan</button>
+                <button id = "displaySearchBtn" class = "unselectedFormBtn">Search Loan</button>
+            </div>
+            <div class = "formContainer">
+            <form id = "addBookForm" class=" displayOne verticalForm form center maxWidth displayGrid">
+                <h1>Loan Book</h1>
+                <input class = "bookId inputField addItemInput"  type="text" placeholder="Book ID">
+                <input id = "userId" class="inputField addItemInput" type="text" placeholder="User ID">
+                <input id = "dueDate" class="inputField addItemInput" type="text" placeholder="Due Date">
+                <button type = "reset" id = "loanBook" class = "blockBtn">Loan Book</button>
+            </form>
+            <form id = "seeCurrentLoans" class = "displayTwo horizontalForm form displayNone">
+                <p class="heading">Users Loans</p>
+                <input id = "userBarcode" class="inputField inputLeft" type="text" name="name" placeholder="Users Barcode">
+                <button type = "reset" id = "seeCurrentLoansBtn" class="inlineSubmitBtn inlineBtn btnRight">Search</button>
+            </form>
+            <form id = "userThatLoanedBook" class = "displayTwo horizontalForm form displayNone">
+                <p class="heading">Find User Loaning Book</p>
+                <input class = "bookId inputField inputLeft" type="text" name="name" placeholder="Book ID">
+                <button type = "reset" id = "seeUserLoaningBookBtn" class="inlineSubmitBtn inlineBtn btnRight">Search</button>
+            </form>
+            <form class = "displayTwo horizontalForm form displayNone">
+                <p class="heading">Return book</p>
+                <input class = "bookId inputField inputLeft" type="text" name="name" placeholder="Book ID">
+                <button type = "reset" id = "returnBookBtn" class="inlineSubmitBtn inlineBtn btnRight">Return</button>
+            </form>
+            <table id = "loansTable">
+                <thead id = 'headingsRow'>
+                </thead>
+                <tbody id = "bodyRows">
+                </tbody>
+                
+            </table>
+        </div>
+    </main>
+</div>
+    <footer>
+        <div class="containerFooter">
+          <a href="users.html">Users</a>
+          <a href="books.html">Books</a>
+          <a href="loans.html">Loans</a>
+          <a href="index.html">University of PontyBridge</a>
+        </div>
+      </footer>
+<script src = "../js/allPages.js" ></script>
+<script src = "../js/addLoan.js "></script>
+<script src = "../js/searchLoans.js "></script>
+<script src = "../js/removeLoan.js "></script>
+<script src="../js/changeUserForm.js"></script>
+</body>
+</html>
