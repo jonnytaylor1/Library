@@ -2,7 +2,7 @@
 
 ## About
 
-The application is a library system and was developed using HTML, CSS, JavaScript, NodeJS(Express) and SQlite. The application was developed for a web dev module at university. All of the requirements in the brief were completed, with some additional features added. Also some of the backend code is not my work, as the main objective was to create a frontend system that integrates with the existing backend (although I modified some of the backend to improve the system as a whole). The main functions of the application are shown in the GIF demos below.
+The application is a library system and was developed using HTML, CSS, JavaScript, NodeJS(Express) and SQlite. The application was developed for a web dev module at university. All of the requirements in the brief were completed, with some additional features added. The main functions of the application are shown in the GIF demos below.
 
 ## Setup
 
